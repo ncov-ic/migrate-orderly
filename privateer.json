@@ -1,0 +1,27 @@
+{
+    "servers": [
+        {
+            "name": "hn2b",
+            "hostname": "wpia-hn2b.hpc.dide.ic.ac.uk",
+            "port": 10022,
+            "key_volume": "privateer_ncov_keys",
+            "data_volume": "privateer_ncov_data",
+            "container": "privateer_ncov_server"
+        }
+    ],
+    "clients": [
+        {
+            "name": "ncov-dide",
+            "backup": ["ncov_orderly_volume"]
+        }
+    ],
+    "volumes": [
+        {
+            "name": "ncov_orderly_volume"
+        }
+    ],
+    "vault": {
+        "url": "https://vault.dide.ic.ac.uk:8200",
+        "prefix": "/secret/privateer/hn2b"
+    }
+}
